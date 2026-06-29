@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "project2-fullstack",
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev --workspace=frontend\" \"npm:dev --workspace=backend\"",
+    "build": "npm run build --workspaces",
+    "start": "npm run start --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
